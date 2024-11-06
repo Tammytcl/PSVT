@@ -1,5 +1,5 @@
 # optimizer
-optimizer = dict(type='AdamW', lr=0.001, weight_decay=0.1)
+optimizer = dict(type='AdamW', lr=0.01, weight_decay=0.1)
 optim_wrapper = dict(type='OptimWrapper', optimizer=optimizer, clip_grad=None)
 # learning policy
 param_scheduler = [

@@ -83,6 +83,9 @@ class FCNHead(BaseDecodeHead):
             feats (Tensor): A tensor of shape (batch_size, self.channels,
                 H, W) which is feature map for last layer of decoder head.
         """
+        # print('='*50)
+        # print(self.input_transform,self.in_index)
+        # print('='*50)
         x = self._transform_inputs(inputs)
         feats = self.convs(x)
         if self.concat_input:

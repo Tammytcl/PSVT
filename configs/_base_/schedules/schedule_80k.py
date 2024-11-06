@@ -1,11 +1,11 @@
 # optimizer
-optimizer = dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0005)
+optimizer = dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.0005)
 optim_wrapper = dict(type='OptimWrapper', optimizer=optimizer, clip_grad=None)
 # learning policy
 param_scheduler = [
     dict(
         type='PolyLR',
-        eta_min=1e-4,
+        eta_min=1e-5,
         power=0.9,
         begin=0,
         end=80000,

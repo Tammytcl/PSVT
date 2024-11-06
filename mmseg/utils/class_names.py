@@ -2,6 +2,7 @@
 from mmengine.utils import is_str
 
 
+
 def cityscapes_classes():
     """Cityscapes class names for external use."""
     return [
@@ -488,6 +489,29 @@ def hsidrive_palette():
             [255, 166, 0], [0, 204, 204]]
 
 
+def acdc_classes():
+    """ACDC class names for external use."""
+    return ['background', 'RV','Myo','LV']
+
+def acdc_palette():
+    """ACDC palette for external use."""
+    return [[128, 64, 128], [244, 35, 232], [70, 70, 70], [102, 102, 156]]
+
+def cardiac_classes():
+    """Cardiac class names for external use."""
+    return ['background','myo', 'la', 'lv', 'ra', 'rv', 'ao', 'pa']
+
+def cardiac_palette():
+    """Cardiac palette for external use."""
+    return [[0, 0, 0],[244, 35, 232], [70, 70, 70], [102, 102, 156],
+            [190, 153, 153], [153, 153, 153], [250, 170, 30], [220, 220, 0]]
+def laseg2013_classes():
+    """LAseg2013 class names for external use."""
+    return ['background','LA']
+
+def laseg2013_palette():
+    """LAseg2013 palette for external use."""
+    return [[0, 0, 0],[255,255,255]]
 dataset_aliases = {
     'cityscapes': ['cityscapes'],
     'ade': ['ade', 'ade20k'],
@@ -510,7 +534,10 @@ dataset_aliases = {
     'hsidrive': [
         'hsidrive', 'HSIDrive', 'HSI-Drive', 'hsidrive20', 'HSIDrive20',
         'HSI-Drive20'
-    ]
+    ],
+    'myacdc': ['myacdc', 'acdc'],
+    'cardiac': ['cardiac'],
+    'laseg2013': ['MyLAseg2013','laseg','laseg2013']
 }
 
 
